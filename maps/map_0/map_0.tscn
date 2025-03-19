@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://me2rrxvyrw2n"]
+
+[ext_resource type="PackedScene" uid="uid://dkqc3ttggv82e" path="res://char/char_0/char_0.tscn" id="1_h05v3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m66l3"]
+size = Vector2(1001, 20)
+
+[node name="map_0" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(591, 604)
+shape = SubResource("RectangleShape2D_m66l3")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D"]
+offset_left = 91.0
+offset_top = 593.0
+offset_right = 1092.0
+offset_bottom = 615.0
+
+[node name="Gadjet" parent="." instance=ExtResource("1_h05v3")]
+position = Vector2(239, 173)
+
+[node name="PlayerSpawn" type="Node2D" parent="."]
+position = Vector2(478, 259)

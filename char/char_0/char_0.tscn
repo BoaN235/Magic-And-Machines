@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dkqc3ttggv82e"]
+
+[ext_resource type="Script" path="res://char/char_0/char_0_controll.gd" id="1_hgbea"]
+[ext_resource type="Texture2D" uid="uid://ckx22ju34gduy" path="res://char/char_0/assets/Char_0_test.png" id="2_r331y"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4kavc"]
+radius = 45.2769
+
+[node name="Gadjet" type="CharacterBody2D"]
+script = ExtResource("1_hgbea")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-3.8147e-06, -7.62939e-06)
+scale = Vector2(0.171875, 0.171875)
+texture = ExtResource("2_r331y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_4kavc")
