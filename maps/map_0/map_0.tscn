@@ -21,6 +21,7 @@ offset_bottom = 615.0
 
 [node name="Gadjet" parent="." instance=ExtResource("1_h05v3")]
 position = Vector2(239, 173)
+max_double_jumps = 3
 
 [node name="PlayerSpawn" type="Node2D" parent="."]
 position = Vector2(478, 259)
