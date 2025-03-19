@@ -1,10 +1,22 @@
-[gd_scene load_steps=4 format=3 uid="uid://dkqc3ttggv82e"]
+[gd_scene load_steps=6 format=3 uid="uid://dkqc3ttggv82e"]
 
 [ext_resource type="Script" path="res://char/char_0/char_0_controll.gd" id="1_hgbea"]
 [ext_resource type="Texture2D" uid="uid://ckx22ju34gduy" path="res://char/char_0/assets/Char_0_test.png" id="2_r331y"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4kavc"]
 radius = 45.2769
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kr0i4"]
+bg_color = Color(0.0705882, 0.0705882, 0.0705882, 0.65098)
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2pjjm"]
+bg_color = Color(0.0705882, 0.0705882, 0.0705882, 0.65098)
+border_color = Color(0.0705882, 0.0705882, 0.0705882, 0.65098)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
 
 [node name="Gadjet" type="CharacterBody2D"]
 script = ExtResource("1_hgbea")
@@ -35,6 +47,12 @@ offset_left = -469.0
 offset_top = 212.0
 offset_right = 469.0
 offset_bottom = 330.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_kr0i4")
+
+[node name="HotBar" type="Panel" parent="Camera2D/Control/HotBar"]
+offset_top = -32.0
+offset_right = 283.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_2pjjm")
 
 [node name="Abilitys" type="Control" parent="Camera2D/Control"]
 anchors_preset = 0
@@ -54,30 +72,161 @@ columns = 12
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 
+[node name="Label" type="Label" parent="Camera2D/Control/GridContainer/Ability_1"]
+layout_mode = 0
+offset_right = 101.0
+offset_bottom = 98.0
+text = "FireBall			
+
+
+1"
+horizontal_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="Camera2D/Control/GridContainer/Ability_1"]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 101.0
+offset_bottom = 100.0
+value = 2.0
+
 [node name="Ability_2" type="Panel" parent="Camera2D/Control/GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
+
+[node name="Label" type="Label" parent="Camera2D/Control/GridContainer/Ability_2"]
+offset_right = 101.0
+offset_bottom = 98.0
+text = "FireBall			
+
+
+1"
+horizontal_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="Camera2D/Control/GridContainer/Ability_2"]
+offset_left = 1.0
+offset_right = 101.0
+offset_bottom = 100.0
+value = 2.0
 
 [node name="Ability_3" type="Panel" parent="Camera2D/Control/GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 
+[node name="Label" type="Label" parent="Camera2D/Control/GridContainer/Ability_3"]
+offset_right = 101.0
+offset_bottom = 98.0
+text = "FireBall			
+
+
+1"
+horizontal_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="Camera2D/Control/GridContainer/Ability_3"]
+offset_left = 1.0
+offset_right = 101.0
+offset_bottom = 100.0
+value = 2.0
+
 [node name="Ability_4" type="Panel" parent="Camera2D/Control/GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
+
+[node name="Label" type="Label" parent="Camera2D/Control/GridContainer/Ability_4"]
+offset_right = 101.0
+offset_bottom = 98.0
+text = "FireBall			
+
+
+1"
+horizontal_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="Camera2D/Control/GridContainer/Ability_4"]
+offset_left = 1.0
+offset_right = 101.0
+offset_bottom = 100.0
+value = 2.0
 
 [node name="Ability_5" type="Panel" parent="Camera2D/Control/GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 
+[node name="Label" type="Label" parent="Camera2D/Control/GridContainer/Ability_5"]
+offset_right = 101.0
+offset_bottom = 98.0
+text = "FireBall			
+
+
+1"
+horizontal_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="Camera2D/Control/GridContainer/Ability_5"]
+offset_left = 1.0
+offset_right = 101.0
+offset_bottom = 100.0
+value = 2.0
+
 [node name="Ability_6" type="Panel" parent="Camera2D/Control/GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
+
+[node name="Label" type="Label" parent="Camera2D/Control/GridContainer/Ability_6"]
+offset_right = 101.0
+offset_bottom = 98.0
+text = "FireBall			
+
+
+1"
+horizontal_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="Camera2D/Control/GridContainer/Ability_6"]
+offset_left = 1.0
+offset_right = 101.0
+offset_bottom = 100.0
+value = 2.0
 
 [node name="Ability_7" type="Panel" parent="Camera2D/Control/GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 
+[node name="Label" type="Label" parent="Camera2D/Control/GridContainer/Ability_7"]
+offset_right = 101.0
+offset_bottom = 98.0
+text = "FireBall			
+
+
+1"
+horizontal_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="Camera2D/Control/GridContainer/Ability_7"]
+offset_left = 1.0
+offset_right = 101.0
+offset_bottom = 100.0
+value = 2.0
+
 [node name="Ability_8" type="Panel" parent="Camera2D/Control/GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
+
+[node name="Label" type="Label" parent="Camera2D/Control/GridContainer/Ability_8"]
+offset_right = 101.0
+offset_bottom = 98.0
+text = "FireBall			
+
+
+1"
+horizontal_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="Camera2D/Control/GridContainer/Ability_8"]
+offset_left = 1.0
+offset_right = 101.0
+offset_bottom = 100.0
+value = 2.0
+
+[connection signal="value_changed" from="Camera2D/Control/GridContainer/Ability_1/ProgressBar" to="." method="_ability_bar_value_changed"]
+[connection signal="value_changed" from="Camera2D/Control/GridContainer/Ability_2/ProgressBar" to="." method="_ability_bar_value_changed"]
+[connection signal="value_changed" from="Camera2D/Control/GridContainer/Ability_3/ProgressBar" to="." method="_ability_bar_value_changed"]
+[connection signal="value_changed" from="Camera2D/Control/GridContainer/Ability_4/ProgressBar" to="." method="_ability_bar_value_changed"]
+[connection signal="value_changed" from="Camera2D/Control/GridContainer/Ability_5/ProgressBar" to="." method="_ability_bar_value_changed"]
+[connection signal="value_changed" from="Camera2D/Control/GridContainer/Ability_6/ProgressBar" to="." method="_ability_bar_value_changed"]
+[connection signal="value_changed" from="Camera2D/Control/GridContainer/Ability_7/ProgressBar" to="." method="_ability_bar_value_changed"]
+[connection signal="value_changed" from="Camera2D/Control/GridContainer/Ability_8/ProgressBar" to="." method="_ability_bar_value_changed"]
