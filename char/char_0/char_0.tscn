@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dkqc3ttggv82e"]
+[gd_scene load_steps=4 format=3 uid="uid://dkqc3ttggv82e"]
 
 [ext_resource type="Script" path="res://char/char_0/char_0_controll.gd" id="1_hgbea"]
 [ext_resource type="Texture2D" uid="uid://ckx22ju34gduy" path="res://char/char_0/assets/Char_0_test.png" id="2_r331y"]
-[ext_resource type="Texture2D" uid="uid://c8o8r7hd6bqeh" path="res://char/char_0/assets/Weapon/Char_0_Weapon.png" id="3_r6ddv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4kavc"]
 radius = 45.2769
@@ -22,6 +21,63 @@ shape = SubResource("CircleShape2D_4kavc")
 position = Vector2(-3.8147e-06, -7.62939e-06)
 scale = Vector2(0.171875, 0.171875)
 
-[node name="Char0Weapon" type="Sprite2D" parent="."]
-position = Vector2(18, -9)
-texture = ExtResource("3_r6ddv")
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Control" type="Control" parent="Camera2D"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HotBar" type="Panel" parent="Camera2D/Control"]
+layout_mode = 0
+offset_left = -469.0
+offset_top = 212.0
+offset_right = 469.0
+offset_bottom = 330.0
+
+[node name="Abilitys" type="Control" parent="Camera2D/Control"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="GridContainer" type="GridContainer" parent="Camera2D/Control"]
+layout_mode = 0
+offset_left = -457.0
+offset_top = 220.0
+offset_right = 455.0
+offset_bottom = 320.0
+theme_override_constants/h_separation = 16
+columns = 12
+
+[node name="Ability_1" type="Panel" parent="Camera2D/Control/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+
+[node name="Ability_2" type="Panel" parent="Camera2D/Control/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+
+[node name="Ability_3" type="Panel" parent="Camera2D/Control/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+
+[node name="Ability_4" type="Panel" parent="Camera2D/Control/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+
+[node name="Ability_5" type="Panel" parent="Camera2D/Control/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+
+[node name="Ability_6" type="Panel" parent="Camera2D/Control/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+
+[node name="Ability_7" type="Panel" parent="Camera2D/Control/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+
+[node name="Ability_8" type="Panel" parent="Camera2D/Control/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
