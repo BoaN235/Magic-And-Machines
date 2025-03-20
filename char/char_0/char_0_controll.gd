@@ -10,6 +10,10 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var jumps = 0
 
 var progressbars = []
+var ab1
+var ab2
+var ab3
+
 
 func _ready():
 	progressbars = [
@@ -30,13 +34,24 @@ func _physics_process(delta):
 		velocity.y += gravity * delta
 	elif is_on_floor():
 		jumps = 0
-	$Camera2D/Control/GridContainer/Ability_1/ProgressBar.value += 1
 
 	# Handle jump.
 	if Input.is_action_just_pressed("con_jump"):
 		if is_on_floor() or jumps <= max_double_jumps:
 			velocity.y = JUMP_VELOCITY
 			jumps += 1
+	for bar in progressbars:
+		if ab1 or ab2 or ab3:
+			bar.visible = true
+		else:
+			bar.visible = false
+
+	if Input.is_action_just_pressed("ability_1"):
+		ab1 = true
+	if Input.is_action_just_pressed("ability_2"):
+		ab2 = true
+	if Input.is_action_just_pressed("ability_3"):
+		ab3 = true
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -52,4 +67,5 @@ func _ability_bar_value_changed(value):
 	print(value)
 	if value == 100:
 		for bar in progressbars:
-			bar.visible = false
+			if bar.value == value:
+				bar.visible = false
