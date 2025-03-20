@@ -10,10 +10,8 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var jumps = 0
 
 var progressbars = []
-var ab1
-var ab2
-var ab3
-
+var cooldowns = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+var cooldown_times = [5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0] # Cooldown times for each ability in seconds
 
 func _ready():
 	progressbars = [
@@ -27,7 +25,6 @@ func _ready():
 		get_node("Camera2D/Control/GridContainer/Ability_8/ProgressBar"),
 	]
 
-
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
@@ -40,18 +37,24 @@ func _physics_process(delta):
 		if is_on_floor() or jumps <= max_double_jumps:
 			velocity.y = JUMP_VELOCITY
 			jumps += 1
-	for bar in progressbars:
-		if ab1 or ab2 or ab3:
-			bar.visible = true
-		else:
-			bar.visible = false
+
+	# Handle abilities
+	for i in range(8):
+		if Input.is_action_just_pressed("ability_%d" % (i + 1)) and cooldowns[i] <= 0:
+			cooldowns[i] = cooldown_times[i]
+			progressbars[i].visible = true
 
 	if Input.is_action_just_pressed("ability_1"):
-		ab1 = true
-	if Input.is_action_just_pressed("ability_2"):
-		ab2 = true
-	if Input.is_action_just_pressed("ability_3"):
-		ab3 = true
+		var fireball = preload("res://char/char_0/assets/Attacks/Projectiles/FireBall/fire_ball.tscn")
+		var fireballins = fireball.instantiate()
+
+	# Update cooldowns and progress bars
+	for i in range(8):
+		if cooldowns[i] > 0:
+			cooldowns[i] -= delta
+			progressbars[i].value = 100 * (1 - cooldowns[i] / cooldown_times[i])
+		else:
+			progressbars[i].visible = false
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -64,7 +67,6 @@ func _physics_process(delta):
 	move_and_slide()
 
 func _ability_bar_value_changed(value):
-	print(value)
 	if value == 100:
 		for bar in progressbars:
 			if bar.value == value:
