@@ -1,19 +1,21 @@
 extends Node2D
 
-@onready var sprite = $AnimatedSprite2D
-var movment = 5
+var movement = 5
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if movment >= 1:
-		position += Vector2(movment, 0)
-	else:
-		position += Vector2(movment, 0)
+	position += Vector2(movement, 0)
 
-func direction(facing):
-	movment = facing * 5
-	if movment <= -1:
-		sprite.flip_h = false
+func direction(facing: int):
+	movement = facing * 5
+	if movement == 0:
+		movement = 5
+
+	if movement < 0:
+		$AnimatedSprite2D.flip_h = true
+	else:
+		$AnimatedSprite2D.flip_h = false
