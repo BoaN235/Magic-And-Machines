@@ -50,6 +50,7 @@ offset_bottom = 330.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_kr0i4")
 
 [node name="HotBar" type="Panel" parent="Camera2D/Control/HotBar"]
+layout_mode = 0
 offset_top = -32.0
 offset_right = 283.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_2pjjm")
@@ -94,6 +95,7 @@ custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 
 [node name="Label" type="Label" parent="Camera2D/Control/GridContainer/Ability_2"]
+layout_mode = 0
 offset_right = 101.0
 offset_bottom = 98.0
 text = "FireBall			
@@ -103,6 +105,7 @@ text = "FireBall
 horizontal_alignment = 1
 
 [node name="ProgressBar" type="ProgressBar" parent="Camera2D/Control/GridContainer/Ability_2"]
+layout_mode = 0
 offset_left = 1.0
 offset_right = 101.0
 offset_bottom = 100.0
@@ -113,6 +116,7 @@ custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 
 [node name="Label" type="Label" parent="Camera2D/Control/GridContainer/Ability_3"]
+layout_mode = 0
 offset_right = 101.0
 offset_bottom = 98.0
 text = "FireBall			
@@ -122,6 +126,7 @@ text = "FireBall
 horizontal_alignment = 1
 
 [node name="ProgressBar" type="ProgressBar" parent="Camera2D/Control/GridContainer/Ability_3"]
+layout_mode = 0
 offset_left = 1.0
 offset_right = 101.0
 offset_bottom = 100.0
@@ -132,6 +137,7 @@ custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 
 [node name="Label" type="Label" parent="Camera2D/Control/GridContainer/Ability_4"]
+layout_mode = 0
 offset_right = 101.0
 offset_bottom = 98.0
 text = "FireBall			
@@ -141,6 +147,7 @@ text = "FireBall
 horizontal_alignment = 1
 
 [node name="ProgressBar" type="ProgressBar" parent="Camera2D/Control/GridContainer/Ability_4"]
+layout_mode = 0
 offset_left = 1.0
 offset_right = 101.0
 offset_bottom = 100.0
@@ -151,6 +158,7 @@ custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 
 [node name="Label" type="Label" parent="Camera2D/Control/GridContainer/Ability_5"]
+layout_mode = 0
 offset_right = 101.0
 offset_bottom = 98.0
 text = "FireBall			
@@ -160,6 +168,7 @@ text = "FireBall
 horizontal_alignment = 1
 
 [node name="ProgressBar" type="ProgressBar" parent="Camera2D/Control/GridContainer/Ability_5"]
+layout_mode = 0
 offset_left = 1.0
 offset_right = 101.0
 offset_bottom = 100.0
@@ -170,6 +179,7 @@ custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 
 [node name="Label" type="Label" parent="Camera2D/Control/GridContainer/Ability_6"]
+layout_mode = 0
 offset_right = 101.0
 offset_bottom = 98.0
 text = "FireBall			
@@ -179,6 +189,7 @@ text = "FireBall
 horizontal_alignment = 1
 
 [node name="ProgressBar" type="ProgressBar" parent="Camera2D/Control/GridContainer/Ability_6"]
+layout_mode = 0
 offset_left = 1.0
 offset_right = 101.0
 offset_bottom = 100.0
@@ -189,6 +200,7 @@ custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 
 [node name="Label" type="Label" parent="Camera2D/Control/GridContainer/Ability_7"]
+layout_mode = 0
 offset_right = 101.0
 offset_bottom = 98.0
 text = "FireBall			
@@ -198,6 +210,7 @@ text = "FireBall
 horizontal_alignment = 1
 
 [node name="ProgressBar" type="ProgressBar" parent="Camera2D/Control/GridContainer/Ability_7"]
+layout_mode = 0
 offset_left = 1.0
 offset_right = 101.0
 offset_bottom = 100.0
@@ -208,6 +221,7 @@ custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 
 [node name="Label" type="Label" parent="Camera2D/Control/GridContainer/Ability_8"]
+layout_mode = 0
 offset_right = 101.0
 offset_bottom = 98.0
 text = "FireBall			
@@ -217,6 +231,7 @@ text = "FireBall
 horizontal_alignment = 1
 
 [node name="ProgressBar" type="ProgressBar" parent="Camera2D/Control/GridContainer/Ability_8"]
+layout_mode = 0
 offset_left = 1.0
 offset_right = 101.0
 offset_bottom = 100.0
